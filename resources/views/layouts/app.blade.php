@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all">
         <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all">
         <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
-
+        <link rel="icon" href="{{ asset('image/logo.png') }}" type="image/png" sizes="16x16">
         <livewire:styles />
         
         <!-- Scripts -->
