@@ -186,7 +186,7 @@ class Tableservicepaid extends Component
         $printer->close();
 
         /* Copy it over to the printer */
-        copy($file, "//192.168.2.171/Gudang");
+        copy($file, "\\192.168.2.171/Gudang");
         // copy($file, "//localhost/EPSONTU");
         unlink($file);
         // return redirect('/laporan'
