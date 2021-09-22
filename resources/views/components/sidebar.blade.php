@@ -1,21 +1,28 @@
 @php
-$links = [
+$links = 
+[
     [
-        "href" => "dashboard",
-        "text" => "Dashboard",
-        "is_multi" => false,
-    ],
-    [
-        "href" => [
+        "href" => 
+        [
             [
-                "section_text" => "User",
+                "section_text" => "Data",
                 "section_list" => [
-                    ["href" => "user", "text" => "Data User"],
-                    ["href" => "user.new", "text" => "Buat User"]
+                    ["href" => "customer", "text" => "Data Customers"],
+                    ["href" => "category", "text" => "Data Categories"],
+                    ["href" => "item", "text" => "Data Items"],
                 ]
-            ]
+            ],
+            [
+                "section_text" => "Services",
+                "section_list" => [
+                    ["href" => "service", "text" => "Registration"],
+                    ["href" => "serviceprocess", "text" => "On Proccess"],
+                    ["href" => "servicedone", "text" => "Done"],
+                    ["href" => "servicepaid", "text" => "Paid"],
+                ]
+            ],
         ],
-        "text" => "User",
+        "text" => "Bengkel Binusa",
         "is_multi" => true,
     ],
 ];
