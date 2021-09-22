@@ -103,6 +103,7 @@ class Tableserviceregistration extends Component
             $this->alamat = $cari->alamat;
             $this->tipe = $cari->tipe;
             $this->tahun = $cari->tahun;
+            $this->add = "Update";
             $this->status = 'Wait List';
             $this->read = true;
         }else{
