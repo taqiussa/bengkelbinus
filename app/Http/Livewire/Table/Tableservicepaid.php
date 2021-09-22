@@ -152,7 +152,7 @@ class Tableservicepaid extends Component
 
         /* Do some printing */
         // $connector = new FilePrintConnector($file);
-        $connector = new WindowsPrintConnector("smb://192.168.2.171/Gudang");
+        $connector = new WindowsPrintConnector("//192.168.2.171/Gudang");
         $printer = new Printer($connector);
         
         /* Print Logo */
@@ -188,7 +188,7 @@ class Tableservicepaid extends Component
         $printer->close();
 
         /* Copy it over to the printer */
-        copy("smb://192.168.2.171/Gudang", $file);
+        copy("//192.168.2.171/Gudang", $file);
         // copy($file, "//localhost/EPSONTU");
         unlink($file);
         // return redirect('/laporan'
