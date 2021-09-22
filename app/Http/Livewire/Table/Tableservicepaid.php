@@ -16,6 +16,7 @@ use Mike42\Escpos\EscposImage;
 use Mike42\Escpos\Printer;
 use Mike42\Escpos\PrintConnectors\FilePrintConnector;
 use Mike42\Escpos\PrintConnectors\NetworkPrintConnector;
+use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
 
 class Tableservicepaid extends Component
 {
@@ -151,7 +152,7 @@ class Tableservicepaid extends Component
 
         /* Do some printing */
         // $connector = new FilePrintConnector($file);
-        $connector = new NetworkPrintConnector($file);
+        $connector = new WindowsPrintConnector($file);
         $printer = new Printer($connector);
         
         /* Print Logo */
@@ -187,7 +188,7 @@ class Tableservicepaid extends Component
         $printer->close();
 
         /* Copy it over to the printer */
-        copy($file, "192.168.2.171");
+        copy($file, "smb://192.168.2.171/Gudang");
         // copy($file, "//localhost/EPSONTU");
         unlink($file);
         // return redirect('/laporan'
