@@ -15,7 +15,7 @@ use Livewire\WithPagination;
 use Mike42\Escpos\EscposImage;
 use Mike42\Escpos\Printer;
 use Mike42\Escpos\PrintConnectors\FilePrintConnector;
-
+use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
 
 class Tableservicepaid extends Component
 {
@@ -150,7 +150,7 @@ class Tableservicepaid extends Component
         $file =  tempnam($tmpdir, 'cetak');
 
         /* Do some printing */
-        $connector = new FilePrintConnector($file);
+        $connector = new WindowsPrintConnector($file);
         $printer = new Printer($connector);
         
         /* Print Logo */
@@ -188,7 +188,7 @@ class Tableservicepaid extends Component
         $printer->close();
 
         /* Copy it over to the printer */
-        copy($file, "//localhost/Gudang");
+        copy($file, "smb://192.168.2.171/Gudang");
         unlink($file);
         // return redirect('/laporan'
     }
