@@ -150,7 +150,7 @@ class Tableservicepaid extends Component
         $file =  tempnam($tmpdir, 'cetak');
 
         /* Do some printing */
-        $connector = new WindowsPrintConnector($file);
+        $connector = new WindowsPrintConnector("smb://192.168.2.171/Gudang");
         $printer = new Printer($connector);
         
         /* Print Logo */
