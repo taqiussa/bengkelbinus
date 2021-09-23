@@ -166,6 +166,8 @@ class Tableservicepaid extends Component
         $printer->setEmphasis(false);
         $printer->text(new Iprint('Customer :', $cari->customer->nama));
         $printer->text(new Iprint('Nopol :', $cari->customer->nopol));
+        $printer->text(new Iprint('Regist :', $cari->created_at->format('d-m-y H:i')));
+        $printer->text(new Iprint('End :', $cari->updated_at->format('d-m-y H:i')));
         $printer->text("--------------------------------\n");
         foreach($details as $d){
             $printer->text(new Iprint($d->item->item .' X '. $d->jumlah, 'Rp. '.number_format($d->harga,0,",",".")));
