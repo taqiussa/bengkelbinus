@@ -150,7 +150,7 @@ class Tableservicepaid extends Component
         $file =  tempnam($tmpdir, 'cetak');
 
         /* Do some printing */
-        $connector = new WindowsPrintConnector("Gudang");
+        $connector = new WindowsPrintConnector("//TAQI-LAPTOP/Gudang");
         $printer = new Printer($connector);
         
         /* Print Logo */
@@ -188,7 +188,7 @@ class Tableservicepaid extends Component
         $printer->close();
 
         /* Copy it over to the printer */
-        copy($file, "Gudang");
+        copy($file, "//TAQI-LAPTOP/Gudang");
         unlink($file);
         // return redirect('/laporan'
     }
