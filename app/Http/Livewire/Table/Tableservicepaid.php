@@ -150,7 +150,7 @@ class Tableservicepaid extends Component
         $file =  tempnam($tmpdir, 'cetak');
 
         /* Do some printing */
-        $connector = new WindowsPrintConnector("USB Port");
+        $connector = new WindowsPrintConnector("smb://192.168.2.171/Gudang");
         $printer = new Printer($connector);
         
         /* Print Logo */
@@ -188,7 +188,7 @@ class Tableservicepaid extends Component
         $printer->close();
 
         /* Copy it over to the printer */
-        copy($file, "USB Port://192.168.2.171/Gudang");
+        copy($file, "smb://192.168.2.171/Gudang");
         unlink($file);
         // return redirect('/laporan'
     }
